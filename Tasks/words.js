@@ -8,13 +8,9 @@ const words = (string) => {
       if (character === ' ') {
         if (flag === true)
           flag = false;
-        else
-          flag = false;
       }
       else {
-        if (flag === true)
-          flag = true;
-        else
+        if (flag === false)
           flag = true;
         number_of_words_in_s++;
       }
@@ -23,14 +19,6 @@ const words = (string) => {
       if (character === ' ') {
         if (flag === true)
           flag = false;
-        else
-          flag = false;
-      }
-      else {
-        if (flag === true)
-          flag = true;
-        else
-          flag = true;
       }
     }
   }
