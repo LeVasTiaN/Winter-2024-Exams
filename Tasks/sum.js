@@ -7,6 +7,6 @@ const sumFunction = (s) => {
     if (typeof index === 'number')
       sum += index;
   return sum;
-};
+}
 
 module.exports = sumFunction;

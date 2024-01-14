@@ -1,4 +1,5 @@
 // Validate person name
+'use strict';
 
 const isValid = (string) => {
   if (
@@ -16,6 +17,6 @@ const isValid = (string) => {
       return false;
   }
   return true;
-};
+}
 
 module.exports = isValid;

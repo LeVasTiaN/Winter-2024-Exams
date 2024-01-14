@@ -1,4 +1,5 @@
 // Copy all listed keys from dictionary
+'use strict';
 
 const take = (dictionary1, ...dictionary2) => {
   for (const value of Object.keys(dictionary1)) {
@@ -7,6 +8,6 @@ const take = (dictionary1, ...dictionary2) => {
     }
   }
   return dictionary1;
-};
+}
 
 module.exports = take;

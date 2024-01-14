@@ -7,6 +7,6 @@ const intersection = (firstObject, secondObject) => {
     if (firstObject[attribute] !== secondObject[attribute])
       delete firstObject[attribute];
   return firstObject;
-};
+}
 
 module.exports = intersection;

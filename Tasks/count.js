@@ -5,8 +5,8 @@ const count = (obj) => {
   for (const key of Object.keys(obj)) {
     if (typeof obj[key] === 'number')
       sum += obj[key];
-  };
+  }
   return sum;
-};
+}
 
 module.exports = count;
