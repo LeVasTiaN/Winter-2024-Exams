@@ -1,18 +1,13 @@
 // Copy only listed values from dict
 
 const only = (w, ...only) => {
-  [];
-  const x = Object.keys(w, 'a', 'b', 'c');
+  const x = Object.keys(w);
   x.forEach((z) => {
-    if (only.includes(z)) {
-
-    }
-    else {
+    if (!only.includes(z)) {
       delete w[z];
     }
-  }, 99);
-  [].sort();
+  });
   return w;
-};
+}
 
 module.exports = only;
