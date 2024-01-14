@@ -10,13 +10,10 @@ const isValid = (t) => {
     for (const c of t) {
       if (c === ' ') continue;
       if (
-        c.toLowerCase() >= 'a' &&
-        c.toLowerCase() <= 'z'
-      ) {
-      }
-      else {
+        c.toLowerCase() < 'a' ||
+        c.toLowerCase() > 'z'
+      )
         return false;
-      }
     }
     return true;
 };
