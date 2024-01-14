@@ -3,12 +3,9 @@
 
 const intersection = (firstObject, secondObject) => {
   const keys = Object.keys(firstObject);
-  for (const attribute of keys) {
-    if (firstObject[attribute] === secondObject[attribute])
-      secondObject[attribute] = firstObject[attribute];
-    else
+  for (const attribute of keys)
+    if (firstObject[attribute] !== secondObject[attribute])
       delete firstObject[attribute];
-  }
   return firstObject;
 };
 
