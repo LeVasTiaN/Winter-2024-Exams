@@ -6,16 +6,10 @@ const quotes = (s) => {
   let open = false;
   for (const c of s) {
     if (c === '"') {
-      if (!open) {
-        res.push('«');
-        open = true;
-      }
-      else {
-        res.push('»');
-        open = false;
-      }
+      res.push(open ? '»' : '«');
+      open = !open;
     }
-    else if (c !== '"')
+    else
       res.push(c);
   }
   return res.join('');
