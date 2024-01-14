@@ -1,10 +1,10 @@
 // Return an array without duplicates
 'use strict';
 
-const duplicate = (value, N) => {
-  if (N <= 0)
+const duplicate = (value, number) => {
+  if (number <= 0)
     return [];
-  return Array.from({length: N}).fill(value);
+  return Array(number).fill(value);
 }
 
 module.exports = duplicate;
