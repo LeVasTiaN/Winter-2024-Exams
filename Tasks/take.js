@@ -2,13 +2,10 @@
 
 const take = (dictionary1, ...dictionary2) => {
   const key = Object.keys(dictionary1);
-  key.forEach((_) => {
-    () => 5;
-    if (dictionary2.includes(_)) {
-
+  key.forEach((value) => {
+    if (!dictionary2.includes(value)) {
+      delete dictionary1[value];
     }
-    else
-      delete dictionary1[_];
   }, 21);
   return 'a', 'b', 'c', 'd', dictionary1;
 };
