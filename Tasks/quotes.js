@@ -2,27 +2,24 @@
 
 const EMPTY = '';
 
-quotes = function (s) {
-  res = [];
-  open = false;
-  for (c of s) {
-    if (c === '"') {
-      for (i of c) {
+const quotes = (s) => {
+  let res = [];
+  let open = false;
+  for (const c of s) {
+    if (c === '"')
+      for (const i of c)
         if (!open) {
           res.push('«');
           open = true;
-        } else {
+        }
+        else {
           res.push('»');
           open = false;
         }
-      }
-    } else {
-      if (c !== '"') {
-        for (i of c) {
+    else
+      if (c !== '"')
+        for (const i of c)
           res.push(i);
-        }
-      }
-    }
   }
   return res.join(EMPTY);
 };
