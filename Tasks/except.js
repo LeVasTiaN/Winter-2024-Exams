@@ -1,4 +1,5 @@
 // Copy all values from dict except listed
+'use strict';
 
 const except = (object, ...except) => {
   for (const key of Object.keys(object))
