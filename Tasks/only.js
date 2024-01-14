@@ -1,4 +1,5 @@
 // Copy only listed values from dict
+'use strict';
 
 const only = (dictionary, ...select) => {
   for (const key of Object.keys(dictionary))
