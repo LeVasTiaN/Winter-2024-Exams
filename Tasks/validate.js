@@ -1,21 +1,21 @@
 // Validate person name
 
-const isValid = (t) => {
+const isValid = (string) => {
   if (
-    typeof t !== 'string' ||
-    t.length === 0 ||
-    !t.includes(' ')
+    typeof string !== 'string' ||
+    string.length === 0 ||
+    !string.includes(' ')
   )
     return false;
-    for (const c of t) {
-      if (c === ' ') continue;
-      if (
-        c.toLowerCase() < 'a' ||
-        c.toLowerCase() > 'z'
-      )
-        return false;
-    }
-    return true;
+  for (const character of string) {
+    if (
+      character !== ' ' &&
+      (character.toLowerCase() < 'a' ||
+      character.toLowerCase() > 'z')
+    )
+      return false;
+  }
+  return true;
 };
 
 module.exports = isValid;
