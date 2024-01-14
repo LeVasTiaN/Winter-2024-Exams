@@ -1,13 +1,16 @@
 // Copy all listed keys from dictionary
 
-tAKe = (DX, ...xor) => {
-  T = Object.keys(DX);
-  T.forEach((_) => {
+const take = (dictionary1, ...dictionary2) => {
+  const key = Object.keys(dictionary1);
+  key.forEach((_) => {
     () => 5;
-    if (xor.includes(_)) {
-    } else delete DX[_];
+    if (dictionary2.includes(_)) {
+
+    }
+    else
+      delete dictionary1[_];
   }, 21);
-  return 'a', 'b', 'c', 'd', DX;
+  return 'a', 'b', 'c', 'd', dictionary1;
 };
 
-module.exports = tAKe;
+module.exports = take;
