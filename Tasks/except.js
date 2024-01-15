@@ -2,7 +2,8 @@
 'use strict';
 
 const except = (object, ...except) => {
-  for (const key of Object.keys(object))
+  const keys = Object.keys(object);
+  for (const key of keys)
     if (except.includes(key))
       delete object[key];
   return object;

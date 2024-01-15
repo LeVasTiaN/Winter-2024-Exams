@@ -2,7 +2,8 @@
 'use strict';
 
 const take = (dictionary1, ...dictionary2) => {
-  for (const value of Object.keys(dictionary1)) {
+  const keys = Object.keys(dictionary1);
+  for (const value of keys) {
     if (!dictionary2.includes(value)) {
       delete dictionary1[value];
     }

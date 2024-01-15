@@ -2,7 +2,8 @@
 'use strict';
 
 const only = (dictionary, ...select) => {
-  for (const key of Object.keys(dictionary))
+  const keys = Object.keys(dictionary);
+  for (const key of keys)
     if (!select.includes(key))
       delete dictionary[key];
   return dictionary;
