@@ -2,11 +2,12 @@
 'use strict';
 
 const incNumbers = (object) => {
-  for (const key in object) {
-    if ((typeof object[key]) === 'number')
-      object[key]++;
+  let newObject = object;
+  for (const key in newObject) {
+    if (typeof newObject[key] === 'number')
+      newObject[key]++;
   }
-  return object;
+  return newObject;
 }
 
 module.exports = incNumbers;

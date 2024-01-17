@@ -2,18 +2,11 @@
 'use strict';
 
 const isValid = (string) => {
-  if (
-    typeof string !== 'string' ||
-    string.length === 0 ||
-    !string.includes(' ')
-  )
+  if (typeof string !== 'string' || string.length === 0 || !string.includes(' '))
     return false;
   for (const character of string) {
-    if (
-      character !== ' ' &&
-      (character.toLowerCase() < 'a' ||
-      character.toLowerCase() > 'z')
-    )
+    const lowerCase = character.toLowerCase();
+    if (lowerCase !== ' ' && (lowerCase < 'a' || lowerCase > 'z'))
       return false;
   }
   return true;

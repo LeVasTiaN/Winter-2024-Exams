@@ -10,8 +10,9 @@ const quotes = (string) => {
       result.push(flag ? '»' : '«');
       flag = !flag;
     }
-    else
+    else {
       result.push(character);
+    }
   }
   return result.join('');
 }

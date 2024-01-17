@@ -2,11 +2,14 @@
 'use strict';
 
 const except = (object, ...except) => {
-  const keys = Object.keys(object);
-  for (const key of keys)
-    if (except.includes(key))
-      delete object[key];
-  return object;
+  let newObject = object;
+  const keys = Object.keys(newObject);
+  for (const key of keys) {
+    if (except.includes(key)) {
+      delete newObject[key];
+    }
+  }
+  return newObject;
 }
 
 module.exports = except;
